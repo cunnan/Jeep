@@ -91,17 +91,12 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
-  },
-  created(){
-    $(function () {  
-          alert(123);  
-    });
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style scoped >
 h1, h2 {
   font-weight: normal;
 }
@@ -115,13 +110,5 @@ li {
 }
 a {
   color: #42b983;
-}
-$color:red;
-a {
-  color:$color;
-}
-.hello{
- background: $color1;
-  border: 10px solid $color2;
 }
 </style>
