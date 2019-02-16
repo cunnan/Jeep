@@ -1,5 +1,5 @@
-import { test } from './../utility/function';
-import obj from './../utility/function';
+import { test } from '@/assets/utility/function';
+import obj from '@/assets/utility/function';
 export default {
     created(){
       this.test();
