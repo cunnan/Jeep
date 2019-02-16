@@ -5,9 +5,8 @@
     </div>
 </template>
 <script>
-export default {
-  
-}
+import index from '../../assets/js/index/index.js';
+export default index;
 </script>
 <style lang="scss" scoped>
 
