@@ -1,15 +1,13 @@
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+    <div class="j-test">
+        <h3>test</h3>    
+    </div>    
 </template>
 <script>
 export default {
-  name: 'App'
+    
 }
 </script>
-
 <style lang="scss">
 
 </style>
-

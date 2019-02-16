@@ -7,6 +7,12 @@ import $ from 'jquery' ;
 
 Vue.config.productionTip = false
 
+//全局组件 
+//引入TextA组件
+// import TextA from './components/sub/text-a.vue'
+
+// Vue.component('j-text-a',TextA)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

@@ -1,0 +1,20 @@
+@import '../var';
+.j-index{
+    background: #000;
+    @media (max-width: 1200px) {
+        background: #f00;
+    }
+   
+    @media (max-width: 992px) {
+        background: #0f0;
+    }
+   
+    @media (max-width: 768px) {
+        background: #00f;
+    }
+
+    @media (max-width: 576px) {
+        background: #ff0;
+    }
+}
+

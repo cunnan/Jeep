@@ -1,27 +1,29 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
+// HelloWorld欢迎页
 import HelloWorld from '@/components/HelloWorld'
 
-//引入test组件
-import Test from '@/components/Test'
+//index首页
+import index from '@/components/index/index'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    // {
-    //   path: '/',
-    //   name: 'HelloWorld',
-    //   component: HelloWorld
-    // },
     {
-      path:'/',
-      redirect:'/test'
+      path: '/HelloWorld',
+      name: 'HelloWorld',
+      component: HelloWorld
     },
     {
-      path:'/test',
-      name:'Test',
-      component:Test
+      path: '/',
+      redirect: '/index'
+    },
+    {
+      path: '/index',
+      name: 'index',
+      component: index
     }
   ]
 })

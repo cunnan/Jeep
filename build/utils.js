@@ -66,7 +66,8 @@ exports.cssLoaders = function (options) {
         loader: 'sass-resources-loader',
         options: {
         resources: [
-          path.resolve(__dirname, '../node_modules/bootstrap/scss/bootstrap-reboot.scss')
+            path.resolve(__dirname, '../node_modules/bootstrap/scss/bootstrap-reboot.scss'),
+            path.resolve(__dirname, '../src/assets/scss/init.scss')
         ]
         }
       }
