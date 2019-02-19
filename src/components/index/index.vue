@@ -1,13 +1,13 @@
 <template>
-    <div class="j-index">
-      <h3>index</h3>
-       
-    </div>
+  <div class="j-index">
+      <!-- 导航栏 -->
+      <j-nav></j-nav>
+  </div>
 </template>
 <script>
-import index from '../../assets/js/index/index.js';
+import index from '@/assets/js/index/index.js';
 export default index;
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 
 </style>

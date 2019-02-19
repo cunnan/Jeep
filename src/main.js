@@ -3,15 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import $ from 'jquery' ;
+import $ from 'jquery' 
 
 Vue.config.productionTip = false
 
 //全局组件 
-//引入TextA组件
-// import TextA from './components/sub/text-a.vue'
-
-// Vue.component('j-text-a',TextA)
+//引入nav组件
+import nav from '@/components/sub/nav'
+Vue.component('j-nav',nav)
 
 /* eslint-disable no-new */
 new Vue({
