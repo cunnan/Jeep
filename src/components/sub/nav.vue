@@ -11,18 +11,46 @@
       <ul>
           <li><a href="#">查询经销商</a></li>
           <li><a href="#">预约试驾</a></li>
-          <li><a href="#" class="pic pic1"><img src="@/assets/images/search.png" alt=""></a></li>
-          <li><a href="#" class="pic"><img src="@/assets/images/sc.png" alt=""></a></li>
-          <li><a href="#" class="pic"><img src="@/assets/images/dt.png" alt=""></a></li>
+          <li><a href="#"><img src="@/assets/images/search.png" alt=""></a></li>
+          <li><a href="#"><img src="@/assets/images/sc.png" alt=""></a></li>
+          <li><a href="#"><img src="@/assets/images/dt.png" alt=""></a></li>
       </ul>
   </div>  
 </template>
 <script>
-export default {
-    
-}
+    export default {
+        
+    }
 </script>
-<style lang="scss">
-
+<style lang="scss"scoped>
+    .j-nav{
+        background: $color-1;
+        height: 5rem;
+        display: flex;
+        padding: 0 10rem;
+    }
+    .j-nav :not(:empty){
+        display: flex;
+    }
+    .j-nav ul:not(:first-child){
+        flex:1 0 auto;
+    }
+    .j-nav ul:last-child{
+        justify-content: flex-end;
+    }
+    .j-nav a{
+    align-items: center;
+    padding: 0.3rem 1rem;
+    color: $color-2;
+    }
+    .j-nav .logo{
+        height: 1.5rem;
+    }
+    .j-nav .dropdown:hover{
+        background: $color-2;
+        color: $color-1;
+    }
 
 </style>
+
+
