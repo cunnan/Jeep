@@ -53,25 +53,52 @@ exports.cssLoaders = function (options) {
       return ['vue-style-loader'].concat(loaders)
     }
   }
-
-  // https://vue-loader.vuejs.org/en/configurations/extract-css.html
+  //全局scss设置
+  function generateSassResourceLoader () {
+      var loaders = [
+          cssLoader,
+          //postcssLoader, px2remLoader, // 若需要则加上这一行，不用就不加
+          'sass-loader',
+          {
+              loader: 'sass-resources-loader',
+              options: {
+                  resources: [
+                    path.resolve(__dirname, '../src/assets/scss/var-mixin.scss')
+          
+                  ]
+              }
+          }
+      ]
+      if (options.extract) {
+          return ExtractTextPlugin.extract({
+              use: loaders,
+              fallback: 'vue-style-loader'
+          })
+      } else {
+          return ['vue-style-loader'].concat(loaders)
+      }
+  }
   return {
     css: generateLoaders(),
     postcss: generateLoaders(),
     less: generateLoaders('less'),
-    sass: generateLoaders('sass', { indentedSyntax: true }),
+    // sass: generateLoaders('sass', { indentedSyntax: true }),
     //scss: generateLoaders('sass'),
-    scss: generateLoaders('sass').concat(
-      {
-        loader: 'sass-resources-loader',
-        options: {
-        resources: [
-            path.resolve(__dirname, '../node_modules/bootstrap/scss/bootstrap-reboot.scss'),
-            path.resolve(__dirname, '../src/assets/scss/init.scss')
-        ]
-        }
-      }
-    ),
+    //设置一
+    sass:generateSassResourceLoader(),
+    scss:generateSassResourceLoader(),
+    //设置二 重复
+    // scss: generateLoaders('sass').concat(
+    //   {
+    //     loader: 'sass-resources-loader',
+    //     options: {
+    //     resources: [
+    //         path.resolve(__dirname, '../src/assets/scss/init.scss'),
+    //         path.resolve(__dirname, '../node_modules/bootstrap/scss/bootstrap-reboot.scss')
+    //     ]
+    //     }
+    //   }
+    // ),
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')
   }

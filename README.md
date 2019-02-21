@@ -38,3 +38,8 @@ npm install --ignore-scripts
 解决
 Module build failed: Error: ENOENT: no such file or directory, scandir 'C:\Users\web\Desktop\Jeep-1\node_modules\node-sass\vendor'
 npm rebuild node-sass
+
+解决
+sass全局引入重复编译问题
+
+变量和混合.scss、样式.scss分别在不同的文件中引入
