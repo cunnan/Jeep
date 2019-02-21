@@ -28,3 +28,13 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+问题解决
+
+解决
+pm ERR! Failed at the chromedriver@2.45.0 install script.
+npm install --ignore-scripts
+
+解决
+Module build failed: Error: ENOENT: no such file or directory, scandir 'C:\Users\web\Desktop\Jeep-1\node_modules\node-sass\vendor'
+npm rebuild node-sass
