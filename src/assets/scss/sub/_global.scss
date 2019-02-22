@@ -1,9 +1,6 @@
 // 公共样式
-a{
+a:hover{
     text-decoration: none;
-    &:hover{
-        text-decoration: none;
-    }
 }
 ul{
     list-style: none;

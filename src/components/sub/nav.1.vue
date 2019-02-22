@@ -23,30 +23,34 @@
     }
 </script>
 <style lang="scss"scoped>
-    .j-nav,.j-nav :not(:empty){
-        flex-direction: row!important;
-        flex: none!important;
-    }
     .j-nav{
         background: $color-1;
-        justify-content: center;
-        height: 4.5rem;
+        height: 5rem;
+        display: flex;
+        padding: 0 10rem;
+    }
+    .j-nav :not(:empty){
+        display: flex;
+    }
+    .j-nav ul:not(:first-child){
+        flex:1 0 auto;
+    }
+    .j-nav ul:last-child{
+        justify-content: flex-end;
     }
     .j-nav a{
-        align-items: center;
-        padding: 0 1.2rem;
-        color: $color-2;
+    align-items: center;
+    padding: 0.3rem 1rem;
+    color: $color-2;
     }
     .j-nav .logo{
         height: 1.5rem;
     }
     .j-nav .dropdown:hover{
         background: $color-2;
-        color:$color-1;
+        color: $color-1;
     }
-    .j-nav ul:last-child{
-       padding-left: 8.5rem;
-    }
+
 </style>
 
 

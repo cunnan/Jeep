@@ -1,36 +1,20 @@
 <template>
-  <div id="app">
+    <div id="app">
     <router-view/>
-  </div>
+    </div>
 </template>
 <script>
-export default {
-  name: 'App'
-}
+    export default {
+        name: 'App'
+    }
 </script>
-
 <style lang="scss"scoped>
-#app{
-    @media (max-width: 1560px) {
-        min-width: 1340px;
+    #app,#app :not(:empty){
+        display: flex;
+        flex-direction: column;
     }
-
-    @media (max-width: 1200px) {
-        min-width: 1140px;
+    #app :not(:empty){
+        flex:1 0 auto;
     }
-   
-    @media (max-width: 992px) {
-        min-width: 960px;
-    }
-   
-    @media (max-width: 768px) {
-        min-width: 720px;
-    }
-
-    @media (max-width: 576px) {
-        min-width: 540px;
-    }
-}
-
 </style>
 
