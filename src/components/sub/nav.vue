@@ -13,7 +13,7 @@
           <li><a href="#">预约试驾</a></li>
           <li><a href="#"><img src="../../assets/images/search.png" alt=""></a></li>
           <li><a href="#"><img src="../../assets/images/sc.png" alt=""></a></li>
-          <li><a href="#"><img src="../../assets/images/dt.png" alt=""></a></li>
+          <li><a href="#"><img :src="dt" alt=""></a></li>
       </ul>
   </div>  
 </template>
@@ -22,7 +22,7 @@
         data(){
             return {
                 logo:'',
-
+                dt:require('@/assets/images/dt.png')
             }
         },
         created() {
@@ -34,6 +34,7 @@
                 var url=`http://127.0.0.1:5050/index/nav`
                 this.axios.get(url).then((res)=>{
                     this.logo=res.data[0]
+                    console.log(res.data)
                 })
             },
             test2(){
@@ -45,7 +46,7 @@
                 })
                 var url='http://127.0.0.1:5050/index/nav2'
                 this.axios.post(url,test).then(res=>{
-                   console.log(res.data)
+                  // console.log(res.data)
                 })
             }
         }
