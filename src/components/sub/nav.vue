@@ -22,6 +22,7 @@
         data(){
             return {
                 logo:'',
+                nav:[]
                 dt:require('@/assets/images/dt.png')
             }
         },
@@ -33,8 +34,13 @@
             test(){
                 var url=`http://127.0.0.1:5050/index/nav`
                 this.axios.get(url).then((res)=>{
+                    res.data[0]={
+                        id:res.data[0].id,
+                        nav:res.data[0].nav,
+                        sid:res.data[0].sid
+                    }
                     this.logo=res.data[0]
-                    console.log(res.data)
+
                 })
             },
             test2(){
