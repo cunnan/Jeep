@@ -24,8 +24,7 @@
 </script>
 <style lang="scss"scoped>
     .j-nav,.j-nav :not(:empty){
-        flex-direction: row!important;
-        flex: none!important;
+        @extend .flex-direction-row;
     }
     .j-nav{
         background: $color-1;
