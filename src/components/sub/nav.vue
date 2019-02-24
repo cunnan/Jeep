@@ -22,7 +22,7 @@
         data(){
             return {
                 logo:'',
-                nav:[]
+                nav:[],
                 dt:require('@/assets/images/dt.png')
             }
         },
