@@ -1,6 +1,6 @@
 <template>
    <div class="j-nav">
-      <ul><li><a href="#"><img  class="logo" :src="logo.nav" alt=""></a></li></ul>
+      <ul><li><a href="#"><img  class="logo" :src="logo" alt=""></a></li></ul>
       <ul>
           <li><a href="#" class="dropdown">品牌车型▼</a></li>
           <li><a href="#">Jeep&nbsp;Life</a></li>
@@ -11,8 +11,8 @@
       <ul>
           <li><a href="#">查询经销商</a></li>
           <li><a href="#">预约试驾</a></li>
-          <li><a href="#"><img src="../../assets/images/search.png" alt=""></a></li>
-          <li><a href="#"><img src="../../assets/images/sc.png" alt=""></a></li>
+          <li><a href="#"><img src="" alt=""></a></li>
+          <li><a href="#"><img src="" alt=""></a></li>
           <li><a href="#"><img :src="dt" alt=""></a></li>
       </ul>
   </div>  
@@ -23,7 +23,7 @@
             return {
                 logo:'',
                 nav:[],
-                dt:require('@/assets/images/dt.png')
+                dt:''
             }
         },
         created() {
@@ -34,13 +34,7 @@
             test(){
                 var url=`http://127.0.0.1:5050/index/nav`
                 this.axios.get(url).then((res)=>{
-                    res.data[0]={
-                        id:res.data[0].id,
-                        nav:res.data[0].nav,
-                        sid:res.data[0].sid
-                    }
-                    this.logo=res.data[0]
-
+                   console.log(res.data)
                 })
             },
             test2(){
