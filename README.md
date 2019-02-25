@@ -43,3 +43,16 @@ npm rebuild node-sass
 sass全局引入重复编译问题
 
 变量和混合.scss、样式.scss分别在不同的文件中引入
+
+index.html文件设置
+
+<!-- 缓存设置 缓存时间单位：s-->
+<meta http-equiv="Cache-Control" content="max-age=3600">
+<!-- 强制浏览器启用Chromium内核 -->
+<meta name="renderer" content="webkit">
+<!-- 浏览器兼容 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!-- 兼容样式引入 -->
+<!--[if lt IE 9]>      
+    <script src=""></script>
+<![endif]-->

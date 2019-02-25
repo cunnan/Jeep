@@ -1,7 +1,12 @@
 // 公共样式
-a:hover{
-    text-decoration: none;
+a{
+    user-select:none;
+    &:hover{
+        text-decoration: none;
+    }
 }
+
+
 ul{
     list-style: none;
     padding-left: 0;
