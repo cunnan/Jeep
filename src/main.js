@@ -24,6 +24,7 @@ Vue.prototype.qs=qs
 
 //引入jQuery
 import $ from 'jquery' 
+Vue.prototype.$=$
 
 //引入全局组件 
 import nav from '@/components/sub/nav'

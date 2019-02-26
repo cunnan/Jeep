@@ -17,7 +17,6 @@
     }
     #app > :not(:empty){
         flex-direction:column;
-        border:5px solid red;
     }
 </style>
 
