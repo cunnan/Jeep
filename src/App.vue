@@ -9,12 +9,15 @@
     }
 </script>
 <style lang="scss"scoped>
-    #app,#app :not(:empty){
-        display: flex;
-        flex-direction: column;
+    #app{
+        @extend .media;
     }
     #app :not(:empty){
-        flex:1 0 auto;
+        display: flex;
+    }
+    #app > :not(:empty){
+        flex-direction:column;
+        border:5px solid red;
     }
 </style>
 

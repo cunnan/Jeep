@@ -15,6 +15,6 @@ export default {
 </script>
 <style lang="scss"scoped>
  .j-index{
-     @extend .media;
+     
  }
 </style>

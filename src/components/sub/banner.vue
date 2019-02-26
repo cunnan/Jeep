@@ -11,6 +11,5 @@
 <style lang="scss" scoped>
     .j-banner{
        height:200px;
-       background:blue;
    }
 </style>

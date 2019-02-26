@@ -1,81 +1,73 @@
 <template>
    <div class="j-nav">
-      <ul><li><a href="#"><img  class="logo" :src="logo" alt=""></a></li></ul>
-      <ul>
-          <li><a href="#" class="dropdown">品牌车型▼</a></li>
-          <li><a href="#">Jeep&nbsp;Life</a></li>
-          <li><a href="#">购车支持</a></li>
-          <li><a href="#">Jeep全境界</a></li>
-          <li><a href="#">品牌信息</a></li>
-      </ul>
-      <ul>
-          <li><a href="#">查询经销商</a></li>
-          <li><a href="#">预约试驾</a></li>
-          <li><a href="#"><img src="" alt=""></a></li>
-          <li><a href="#"><img src="" alt=""></a></li>
-          <li><a href="#"><img :src="dt" alt=""></a></li>
-      </ul>
+     <ul class="nav">
+         <li class="left">
+            <span><a href="#"><img :src="nav" alt=""></a></span>
+            <div>
+                <a class="dropdown"href="#">品牌车型▼</a>
+                <a href="#">品牌车型▼</a>
+                <a href="#">品牌车型▼</a>
+                <a href="#">品牌车型▼</a>
+                <a href="#">品牌车型▼</a>
+            </div>
+         </li>
+         <li class="right">
+            <a href="#">品牌车型▼</a>
+            <a href="#">品牌车型▼</a>
+            <a href="#"><img :src="nav" alt=""></a>
+            <a href="#"><img :src="nav" alt=""></a>
+            <a href="#"><img :src="nav" alt=""></a>
+         </li>
+     </ul>
   </div>  
 </template>
 <script>
     export default {
         data(){
             return {
-                logo:'',
-                nav:[],
-                dt:''
+                nav:''
             }
-        },
-        created() {
-            this.test()
-            this.test2()
         },
         methods:{
             test(){
                 var url=`http://127.0.0.1:5050/index/nav`
                 this.axios.get(url).then((res)=>{
-                   console.log(res.data)
-                })
-            },
-            test2(){
-                var num1=2;
-                var num2=22;
-                var test=this.qs.stringify({
-                    num1,
-                    num2
-                })
-                var url='http://127.0.0.1:5050/index/nav2'
-                this.axios.post(url,test).then(res=>{
-                  // console.log(res.data)
+                   this.nav='http://127.0.0.1:5050'+res.data[0].url
+                   console.log(this.nav)
                 })
             }
-        }
+        },
+        created() {
+            this.test()
+        },
     }
     
 </script>
 <style lang="scss"scoped>
-    .j-nav,.j-nav :not(:empty){
-        @extend .flex-direction-row;
-    }
     .j-nav{
-        background: $color-1;
-        justify-content: center;
-        height: 4.5rem;
+         justify-content: center;
+         background:#000;
+    }
+    .j-nav .nav{
+        width:80%;
+        height:4.5rem;
+        justify-content:space-between;
     }
     .j-nav a{
+        padding: 0 1rem;
         align-items: center;
-        padding: 0 1.2rem;
-        color: $color-2;
+        flex:1 0 auto;
+        color:#fff;
     }
-    .j-nav .logo{
-        height: 1.5rem;
+    .j-nav img{
+        height:1.5rem;
+    }
+    .j-nav .left span{
+        padding-right: 2rem;
     }
     .j-nav .dropdown:hover{
-        background: $color-2;
-        color:$color-1;
-    }
-    .j-nav ul:last-child{
-       padding-left: 8.5rem;
+        background:#fff;
+        color:#000;
     }
 </style>
 
