@@ -39,5 +39,30 @@
                     pluginspage="http://www.macromedia.com/go/getflashplayer">
             </object>
         </div>
+        <script>
+            var $=(function(){
+    return function (callback){
+        return new Promise(function(open,err){
+          open(callback);
+        })
+    }
+})()
+var a=10
+var b=20
+var c=30
+$({a,b,c}).then(p=>{
+    console.log(p);
+    return p;
+}).then(p=>{
+    console.log(p.b);
+   return p;
+}).then(p=>{
+    console.log(p.c);
+}).catch(err=>{
+    if(err) console.log(err)
+})
+
+
+        </script>
 </body>
 </html>
