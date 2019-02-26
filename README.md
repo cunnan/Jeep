@@ -56,3 +56,8 @@ index.html文件设置
 <!--[if lt IE 9]>      
     <script src=""></script>
 <![endif]-->
+
+解决
+vscode 用git 拉取代码，提示：在签出前，请清理存储库工作树
+
+git reset --hard
