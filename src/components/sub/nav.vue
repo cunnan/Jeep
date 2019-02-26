@@ -4,7 +4,7 @@
          <li class="left">
             <span><a href="#"><img :src="nav" alt=""></a></span>
             <div>
-                <a class="dropdown"href="#">品牌车型▼</a>
+                <a href="#">品牌车型▼</a>
                 <a href="#">品牌车型▼</a>
                 <a href="#">品牌车型▼</a>
                 <a href="#">品牌车型▼</a>
@@ -32,7 +32,7 @@
             test(){
                 var url=`http://127.0.0.1:5050/index/nav`
                 this.axios.get(url).then((res)=>{
-                   this.nav='http://127.0.0.1:5050'+res.data[0].url
+                   this.nav=res.data[0].url
                    console.log(this.nav)
                 })
             }
@@ -46,7 +46,7 @@
 <style lang="scss"scoped>
     .j-nav{
          justify-content: center;
-         background:#000;
+         background:$color-1;
     }
     .j-nav .nav{
         width:80%;
@@ -57,17 +57,17 @@
         padding: 0 1rem;
         align-items: center;
         flex:1 0 auto;
-        color:#fff;
+        color:$color-2;
+    }
+    .j-nav .left span a{
+        padding-right: 3rem;
+    }
+    .j-nav .left div a:first-child:hover{
+        background:$color-2;
+        color:$color-1;
     }
     .j-nav img{
         height:1.5rem;
-    }
-    .j-nav .left span{
-        padding-right: 2rem;
-    }
-    .j-nav .dropdown:hover{
-        background:#fff;
-        color:#000;
     }
 </style>
 
