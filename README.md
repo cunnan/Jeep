@@ -61,3 +61,8 @@ index.html文件设置
 vscode 用git 拉取代码，提示：在签出前，请清理存储库工作树
 
 git reset --hard
+
+样式编写体会
+div :not(:empty){display:flex;} 选择器的应用很方便
+尽量在a标签上设置padding
+弹性布局中的flex也尽量设置在a标签中，个人习惯
