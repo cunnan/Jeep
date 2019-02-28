@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+       .box{
+           width: 600px;
+           height: 400px;
+           background: #eaeaea;
+           margin: 3rem auto;
+           display: flex;
+          
+       }
+       .imgs{
+           width: 100%;
+          float: left;
+           flex-wrap: wrap;
+           position: relative;
+           overflow-y: auto;
+       }
+       .add,.file,.img{
+          display: inline-block;
+          width:3rem;
+          height: 3rem;
+          box-sizing: border-box;
+          font-size: 2rem;
+          text-align: center;
+          line-height: 3rem;
+          margin: 0.5rem 1rem;
+       }
+       .add,.file{
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: #faf;
+        }
+        .add:hover,.file:hover{
+            cursor: pointer;
+        }
+       .file{
+           opacity: 0;
+       }
+       .img{
+           object-fit: fill;
+       }
+      
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="imgs">
+            <span class="add">+</span>
+            <input type="file"class="file"multiple accept="image/*">
+            <img src="" alt=""class="img">
+        </div>
+    </div>
+    <script>
+        var file=document.querySelector('.file')//图片添加对象
+        var imgsBox=document.querySelector('.imgs')//图片显示盒子
+        window.URL = window.URL || window.webkitURL;//将本地图片转换为img标签可加载的形式
+        var tmp=document.createDocumentFragment()//创建临时dom片段
+        var imgs=[]//添加的图片数组
+        file.addEventListener('change',showImg,false)
+       function showImg(){
+        //将刚添加的图片加入图片数组
+        for(var item of this.files){
+            imgs.push(item)
+        }
+        //将刚添加的图片显示在图片盒子最前面
+        var key=this.files.length-1;
+        for(key;key>=0;key--){
+            var img=new Image();//创建图片对象
+            img.src=window.URL.createObjectURL(this.files[key])
+            img.classList.add('img')
+            tmp.append(img)
+        }
+        var firstImg=imgsBox.children[3]//获取盒子中第一张图片对象
+        imgsBox.insertBefore(tmp,firstImg)//临时片段加入盒子
+      }
+
+    </script>
+</body>
+</html>
