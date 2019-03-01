@@ -1,5 +1,5 @@
 //引入全局样式
-import '@/assets/scss/common.scss'
+import '@/assets/scss/common/common.scss'
 
 //
 import Vue from 'vue'

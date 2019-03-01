@@ -63,7 +63,7 @@ exports.cssLoaders = function (options) {
               loader: 'sass-resources-loader',
               options: {
                   resources: [
-                    path.resolve(__dirname, '../src/assets/scss/var-mixin.scss')
+                    path.resolve(__dirname, '../src/assets/scss/variables/variables.scss')
           
                   ]
               }
