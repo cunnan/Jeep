@@ -66,3 +66,9 @@ git reset --hard
 div :not(:empty){display:flex;} 选择器的应用很方便
 尽量在a标签上设置padding
 弹性布局中的flex也尽量设置在a标签中，个人习惯
+
+
+关于this
+
+this指向的是其所在运行环境的对象
+对象中的构造函数会在对象实例化时在对象内部自动创建一个自己的实例对象，这个实例对象就是this

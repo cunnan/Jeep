@@ -56,7 +56,7 @@
     .j-banner .pics{
         animation:loops 50s linear infinite alternate;
     }
-     @keyframes loops{
+    @keyframes loops{
         20%{
             transform:translate(-100%)
         }
@@ -72,5 +72,5 @@
         100%{
             transform:translate(-500%)
         }
-       }
+    }
 </style>
