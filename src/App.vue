@@ -14,6 +14,7 @@
     }
     #app :not(:empty){
         display: flex;
+        user-select:none;
     }
     #app > :not(:empty){
         flex-direction:column;
