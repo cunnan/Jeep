@@ -72,3 +72,11 @@ div :not(:empty){display:flex;} 选择器的应用很方便
 
 this指向的是其所在运行环境的对象
 对象中的构造函数会在对象实例化时在对象内部自动创建一个自己的实例对象，这个实例对象就是this
+
+问题
+
+pull下来jeep后，安装包，会有提示操作平台不匹配的警告，暂时不理会，漏洞提醒暂且不要解决，否则
+会出现引用的包的版本冲突问题，版本冲突可以通过修改package.json文件的依赖版本，很难解决，添加软链
+接可能会解决
+
+vue中的model数据最好是一维的 v-for不会出现can not read property of undefined的问题

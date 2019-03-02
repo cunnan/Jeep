@@ -1,6 +1,6 @@
 <template>
     <div class="j-banner">
-      <!--  <div class="pics">
+        <div class="pics">
             <a href=""><img src="../../assets/images/banner/banner1.jpg" alt=""></a>
             <a href=""><img src="../../assets/images/banner/banner2.jpg" alt=""></a>
             <a href=""><img src="../../assets/images/banner/banner3.jpg" alt=""></a>
@@ -15,7 +15,7 @@
             <span></span>
             <span></span>
             <span></span>
-        </div> -->
+        </div>
     </div>
 </template>
 <script>
