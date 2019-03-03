@@ -49,6 +49,7 @@
             },
             //单击指示器
             zsqBanner(e){    
+                if(this.i==parseInt(e.target.dataset.zsq)) return;
                 clearTimeout(this.n);
                 this.zsq[this.i].classList.remove('active');
                 if(this.i<parseInt(e.target.dataset.zsq)){
