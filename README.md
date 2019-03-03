@@ -80,3 +80,6 @@ pull下来jeep后，安装包，会有提示操作平台不匹配的警告，暂
 接可能会解决
 
 vue中的model数据最好是一维的 v-for不会出现can not read property of undefined的问题
+
+生命周期
+updated 距离属性变化时会触发

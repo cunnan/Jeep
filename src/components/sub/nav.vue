@@ -64,9 +64,9 @@
         background:#000;
         justify-content:center;
     }
-    //设置.nav固定宽度,并且子节点.nav-child两端对齐
+    //设置.nav宽度,并且子节点.nav-child两端对齐
     .j-nav .nav{
-        flex:0 0 80%;
+        width: 80%;;
         justify-content:space-between;
     }
     //设置.nav-child的子节点.item固定宽度,内边距,字体
