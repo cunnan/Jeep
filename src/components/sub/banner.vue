@@ -74,11 +74,14 @@
     // 轮播图
     // 顶部节点.j-banner
     // 设置.j-banner高度
+    $w:100%;
+    $h:9*$w/16;
     .j-banner{
-        height: 40rem;
+        height: $h;
         position: relative;
         justify-content: center;
         overflow: hidden;
+        transition: 1s;
     }
     //设置.pics宽度
     .j-banner .pics{
