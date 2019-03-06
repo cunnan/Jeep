@@ -1,5 +1,5 @@
 <template>
-    <div class="j-banner">
+    <div class="j-banner" :style="heightBanner">
         <div class="pics" :style="trans">
             <router-link to="javscript:;" class="pic" v-for="item in banners" :key="item.id"><img class="img" :src="item.imgurl" alt=""></router-link>
         </div>
@@ -19,6 +19,7 @@
                 step:1,//位移步长和方向
                 zsq:[],//指示器数组
                 n:'',//定时器
+                heightBanner:0
             }
         },
         watch:{
@@ -59,10 +60,15 @@
                 }
                 this.i=parseInt(e.target.dataset.zsq);
                 this.trans=`transform:translate(-${this.i}00%)`;
+            },
+            hBanner(){
+                this.heightBanner='height:'+innerHeight+'px'
             }
         },
         created(){
             this.getBanner();
+            this.hBanner()
+            console.log(this.heightBanner)
            
         },
         updated(){
@@ -74,10 +80,7 @@
     // 轮播图
     // 顶部节点.j-banner
     // 设置.j-banner高度
-    $w:100%;
-    $h:9*$w/16;
     .j-banner{
-        height: $h;
         position: relative;
         justify-content: center;
         overflow: hidden;

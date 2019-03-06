@@ -1,5 +1,5 @@
 <template>
-   <div class="j-nav" :class="fixed">
+   <div class="j-nav fixed" :class="fixed">
        <div class="nav">
            <div class="nav-child">
                <router-link to="javascript:;" @mouseenter.native="dropnav1" class="item logo"><img :src="logo.url" alt="" class="img"></router-link>
@@ -42,8 +42,8 @@
                 navfunc:[],
                 // 下拉
                 bool:false,
-               show:{show:this.bool},
-               drops:{dropdown:this.bool},
+               show:{},
+               drops:{},
                 //carinfo
                 infourl:''  
             }
@@ -93,8 +93,9 @@
             carinfo(){
                 for(var item of this.navlist){
                     if(item.id == parseInt(event.target.dataset.id)){
-                        this.infourl=item.infourl
-                        console.log(typeof item.infourl)
+                        if(typeof item.infourl!='object'){
+                            this.infourl=item.infourl
+                        }
                     }
                 }
             },
@@ -175,6 +176,7 @@
         top: 100%;
         left: 0;
         display: none!important;
+        height:800%;
     }
     .j-nav .nav .box.show{
         display: flex!important;
@@ -193,7 +195,7 @@
     }
     .j-nav .box .left .item{
         flex:0 0 50%;
-       height: 8rem;
+       height: 20%;
     }
     .j-nav .box .left .item:hover{
         background: rgba(0,0,0,0.1);
