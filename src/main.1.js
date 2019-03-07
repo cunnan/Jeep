@@ -26,6 +26,10 @@ Vue.prototype.qs=qs
 import $ from 'jquery' 
 Vue.prototype.$=$
 
+//引入全局组件 
+import nav from '@/components/sub/nav'
+Vue.component('j-nav',nav)
+
 //过滤器
 Vue.filter('time',function(val){
   var date=new Date(val)

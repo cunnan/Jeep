@@ -1,16 +1,18 @@
 <template>
   <div class="j-index">
-      <!-- 导航栏 -->
-      <j-nav></j-nav>
-      <!-- 轮播图 -->
-      <j-banner></j-banner>
+    <j-nav-one :navList="navList"></j-nav-one>
+    <router-view></router-view>
   </div>
 </template>
 <script>
-
-import jBanner from '@/components/sub/banner';
+import  jNavOne  from "@/components/sub/NavOne";
 export default {
-    components:{jBanner}
+   data(){
+     return {
+       navList:['navList','navitemText','navitemImg']
+     }
+   },
+    components:{jNavOne}
 }
 </script>
 <style lang="scss"scoped>
